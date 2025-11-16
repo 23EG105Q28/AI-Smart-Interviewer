@@ -1,0 +1,45 @@
+{
+  "session_summary": {
+    "duration_seconds": 18.6,
+    "total_segments": 1,
+    "total_words": 8,
+    "average_words_per_segment": 8.0,
+    "overall_score": 65.0
+  },
+  "performance_metrics": {
+    "confidence": 15.0,
+    "clarity": 30.0,
+    "fluency": 20.0,
+    "consistency": 100.0
+  },
+  "strengths": [
+    "✅ Excellent grammar and clarity",
+    "✅ Good fluency and sentence structure"
+  ],
+  "areas_for_improvement": [
+    "⚠️ Confidence - Work on maintaining a positive and assured tone"
+  ],
+  "detailed_recommendations": [
+    {
+      "skill": "Confidence & Tone",
+      "current_score": 15.0,
+      "target_score": "20-30",
+      "suggestions": [
+        "Practice speaking with conviction and enthusiasm",
+        "Use positive language and avoid hesitant phrases",
+        "Smile while speaking to naturally improve tone",
+        "Record yourself and listen to identify areas lacking confidence"
+      ]
+    }
+  ],
+  "general_tips": [
+    "🎯 Practice regularly with this tool to track improvement",
+    "📚 Read the scrolling text aloud multiple times to build fluency",
+    "🎥 Review your recorded sessions to identify patterns",
+    "⏱️ Time yourself - aim to maintain quality over longer durations",
+    "👥 Practice with real interviews or presentations scenarios",
+    "🔄 Iterate - each session should show measurable improvement"
+  ],
+  "transcript": "relationship bakwas bahut confidence and ability to inspectors",
+  "interpretation": "Excellent! You demonstrate strong communication skills."
+}

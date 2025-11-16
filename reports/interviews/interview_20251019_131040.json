@@ -1,0 +1,148 @@
+{
+  "timestamp": "20251019_131040",
+  "duration": 216.5223925113678,
+  "questions": [
+    "Thank you for joining today. Let's start - can you walk me through your professional background?",
+    "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+    "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+    "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+    "Walk me through your most successful project from start to finish. What made it successful?",
+    "What motivates you in your professional life, and how do you handle setbacks?"
+  ],
+  "responses": [
+    {
+      "question": "Thank you for joining today. Let's start - can you walk me through your professional background?",
+      "question_number": 1,
+      "answer": "from Anurag University for 7 3rd year of my BTech",
+      "timestamp": 1760859455.625028
+    },
+    {
+      "question": "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+      "question_number": 2,
+      "answer": "many of the problems of the DSA in the various websites like delete code code check hackerrank etc this makes me the perfection",
+      "timestamp": 1760859490.130146
+    },
+    {
+      "question": "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+      "question_number": 3,
+      "answer": "some Python and using MLA AI ml which makes the face detection and",
+      "timestamp": 1760859530.4861295
+    },
+    {
+      "question": "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+      "question_number": 4,
+      "answer": "members using my leaders personality skills and have managed the problems and problem statement for the distribution of the problem to the various team members and it could help me to lead the steam with the different personalities and mentalities in the team present",
+      "timestamp": 1760859573.4100962
+    },
+    {
+      "question": "Walk me through your most successful project from start to finish. What made it successful?",
+      "question_number": 5,
+      "answer": "personal emotion and etc and makes you a",
+      "timestamp": 1760859600.9279833
+    },
+    {
+      "question": "What motivates you in your professional life, and how do you handle setbacks?",
+      "question_number": 6,
+      "answer": "advocate person in my life and I will handle my setbacks with my",
+      "timestamp": 1760859629.8056452
+    }
+  ],
+  "messages": [
+    {
+      "type": "ai",
+      "content": "Hello and welcome! I've reviewed your resume and prepared some questions for you. Let's begin!",
+      "timestamp": 1760859424.501073
+    },
+    {
+      "type": "ai",
+      "content": "Thank you for joining today. Let's start - can you walk me through your professional background?",
+      "timestamp": 1760859437.6478314
+    },
+    {
+      "type": "user",
+      "content": "from Anurag University for 7 3rd year of my BTech",
+      "timestamp": 1760859455.6249843
+    },
+    {
+      "type": "ai",
+      "content": "Excellent response. Let's continue to the next question.",
+      "timestamp": 1760859456.6286974
+    },
+    {
+      "type": "ai",
+      "content": "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+      "timestamp": 1760859465.247755
+    },
+    {
+      "type": "user",
+      "content": "many of the problems of the DSA in the various websites like delete code code check hackerrank etc this makes me the perfection",
+      "timestamp": 1760859490.1301265
+    },
+    {
+      "type": "ai",
+      "content": "Great answer! Let's continue to the next question.",
+      "timestamp": 1760859491.1312292
+    },
+    {
+      "type": "ai",
+      "content": "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+      "timestamp": 1760859499.3207624
+    },
+    {
+      "type": "user",
+      "content": "some Python and using MLA AI ml which makes the face detection and",
+      "timestamp": 1760859530.485955
+    },
+    {
+      "type": "ai",
+      "content": "That's very helpful. Let's continue to the next question.",
+      "timestamp": 1760859531.4869082
+    },
+    {
+      "type": "ai",
+      "content": "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+      "timestamp": 1760859540.1131673
+    },
+    {
+      "type": "user",
+      "content": "members using my leaders personality skills and have managed the problems and problem statement for the distribution of the problem to the various team members and it could help me to lead the steam with the different personalities and mentalities in the team present",
+      "timestamp": 1760859573.410079
+    },
+    {
+      "type": "ai",
+      "content": "That's very helpful. Let's continue to the next question.",
+      "timestamp": 1760859574.411425
+    },
+    {
+      "type": "ai",
+      "content": "Walk me through your most successful project from start to finish. What made it successful?",
+      "timestamp": 1760859583.0187774
+    },
+    {
+      "type": "user",
+      "content": "personal emotion and etc and makes you a",
+      "timestamp": 1760859600.9279604
+    },
+    {
+      "type": "ai",
+      "content": "I appreciate that insight. Let's continue to the next question.",
+      "timestamp": 1760859601.9294062
+    },
+    {
+      "type": "ai",
+      "content": "What motivates you in your professional life, and how do you handle setbacks?",
+      "timestamp": 1760859610.9998336
+    },
+    {
+      "type": "user",
+      "content": "advocate person in my life and I will handle my setbacks with my",
+      "timestamp": 1760859629.8056245
+    },
+    {
+      "type": "ai",
+      "content": "Thank you so much for your time! You've provided some great answers. Let me prepare your personalized improvement report now.",
+      "timestamp": 1760859630.8064244
+    }
+  ],
+  "resume_filename": "Harsha_resume.pdf"
+}

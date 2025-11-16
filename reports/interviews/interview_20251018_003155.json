@@ -1,0 +1,26 @@
+{
+  "timestamp": "20251018_003155",
+  "duration": 22.458295822143555,
+  "questions": [
+    "Thank you for joining today. Let's start - can you walk me through your professional background?",
+    "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+    "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+    "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+    "Walk me through your most successful project from start to finish. What made it successful?",
+    "What motivates you in your professional life, and how do you handle setbacks?"
+  ],
+  "responses": [],
+  "messages": [
+    {
+      "type": "ai",
+      "content": "Hello and welcome! I've reviewed your resume and prepared some questions for you. Let's begin!",
+      "timestamp": 1760727693.53793
+    },
+    {
+      "type": "ai",
+      "content": "Thank you for joining today. Let's start - can you walk me through your professional background?",
+      "timestamp": 1760727706.1546948
+    }
+  ],
+  "resume_filename": "Manish_Mathe_resume_Google24-08.pdf"
+}

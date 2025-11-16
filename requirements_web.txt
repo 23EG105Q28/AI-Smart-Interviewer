@@ -1,0 +1,10 @@
+# AI Soft Skill Evaluator - Web Version
+# Requirements for running the web application
+
+Flask==3.0.0
+opencv-python==4.10.0.84
+numpy<2
+SpeechRecognition==3.10.0
+textblob==0.18.0
+PyAudio==0.2.14
+Werkzeug==3.0.1

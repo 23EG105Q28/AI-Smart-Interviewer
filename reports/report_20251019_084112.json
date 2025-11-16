@@ -1,0 +1,12 @@
+{
+  "session_summary": {
+    "status": "No speech detected",
+    "message": "No analysis could be performed. Please speak clearly into the microphone."
+  },
+  "performance_metrics": {},
+  "strengths": [],
+  "areas_for_improvement": [],
+  "detailed_recommendations": [],
+  "general_tips": [],
+  "transcript": "No speech detected"
+}

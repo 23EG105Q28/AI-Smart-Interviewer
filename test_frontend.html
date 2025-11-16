@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frontend Debug Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #1a1a2e;
+            color: white;
+        }
+        .test-section {
+            background: #16213e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #0f3460;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4ade80;
+            margin: 10px 0;
+        }
+        .log {
+            background: #0f172a;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+        .log-entry {
+            margin: 2px 0;
+            padding: 2px;
+        }
+        .log-success { color: #4ade80; }
+        .log-error { color: #ef4444; }
+        .log-info { color: #60a5fa; }
+    </style>
+</head>
+<body>
+    <h1>🔬 Frontend Debug Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: API Endpoints</h2>
+        <button onclick="testGetFeedback()">Test GET /get_feedback</button>
+        <button onclick="testStartRecording()">Test POST /start_recording</button>
+        <button onclick="testStopRecording()">Test POST /stop_recording</button>
+        <div id="apiLog" class="log"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: DOM Manipulation</h2>
+        <button onclick="updateScoresManually()">Manually Update Scores (Test DOM)</button>
+        <div class="score">
+            <span>Confidence: </span><span id="scoreConfidence">0/30</span><br>
+            <span>Clarity: </span><span id="scoreClarity">0/30</span><br>
+            <span>Fluency: </span><span id="scoreFluency">0/20</span><br>
+            <span>Total: </span><span id="scoreTotal">0/80</span>
+        </div>
+        <div id="domLog" class="log"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Continuous Polling (Like Real App)</h2>
+        <button onclick="startPolling()">Start Polling (Every 1s)</button>
+        <button onclick="stopPolling()">Stop Polling</button>
+        <div class="score">
+            <span>Live Confidence: </span><span id="liveConfidence">0/30</span><br>
+            <span>Live Clarity: </span><span id="liveClarity">0/30</span><br>
+            <span>Live Fluency: </span><span id="liveFluency">0/20</span><br>
+            <span>Live Total: </span><span id="liveTotal">0/80</span>
+        </div>
+        <div id="pollingLog" class="log"></div>
+    </div>
+
+    <script>
+        let pollingInterval = null;
+        let pollCount = 0;
+
+        function log(elementId, message, type = 'info') {
+            const logDiv = document.getElementById(elementId);
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            const timestamp = new Date().toLocaleTimeString();
+            entry.textContent = `[${timestamp}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        async function testGetFeedback() {
+            try {
+                log('apiLog', 'Fetching /get_feedback...', 'info');
+                const response = await fetch('http://localhost:5000/get_feedback');
+                const data = await response.json();
+                log('apiLog', `Response: ${JSON.stringify(data, null, 2)}`, 'success');
+                
+                if (data.analysis) {
+                    log('apiLog', `Analysis found! Conf=${data.analysis.confidence}, Clar=${data.analysis.clarity}, Flu=${data.analysis.fluency}`, 'success');
+                } else {
+                    log('apiLog', `No analysis data (status: ${data.status})`, 'info');
+                }
+            } catch (error) {
+                log('apiLog', `ERROR: ${error.message}`, 'error');
+            }
+        }
+
+        async function testStartRecording() {
+            try {
+                log('apiLog', 'Starting recording...', 'info');
+                const response = await fetch('http://localhost:5000/start_recording', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                log('apiLog', `Response: ${JSON.stringify(data, null, 2)}`, 'success');
+            } catch (error) {
+                log('apiLog', `ERROR: ${error.message}`, 'error');
+            }
+        }
+
+        async function testStopRecording() {
+            try {
+                log('apiLog', 'Stopping recording...', 'info');
+                const response = await fetch('http://localhost:5000/stop_recording', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                log('apiLog', `Response: ${JSON.stringify(data, null, 2)}`, 'success');
+            } catch (error) {
+                log('apiLog', `ERROR: ${error.message}`, 'error');
+            }
+        }
+
+        function updateScoresManually() {
+            const testValues = {
+                confidence: Math.random() * 30,
+                clarity: Math.random() * 30,
+                fluency: Math.random() * 20
+            };
+            testValues.total = testValues.confidence + testValues.clarity + testValues.fluency;
+
+            log('domLog', `Setting test values: Conf=${testValues.confidence.toFixed(1)}, Clar=${testValues.clarity.toFixed(1)}, Flu=${testValues.fluency.toFixed(1)}`, 'info');
+
+            const confElem = document.getElementById('scoreConfidence');
+            const clarElem = document.getElementById('scoreClarity');
+            const fluElem = document.getElementById('scoreFluency');
+            const totalElem = document.getElementById('scoreTotal');
+
+            confElem.textContent = `${testValues.confidence.toFixed(1)}/30`;
+            clarElem.textContent = `${testValues.clarity.toFixed(1)}/30`;
+            fluElem.textContent = `${testValues.fluency.toFixed(1)}/20`;
+            totalElem.textContent = `${testValues.total.toFixed(1)}/80`;
+
+            log('domLog', `DOM updated successfully!`, 'success');
+            log('domLog', `Conf elem text: "${confElem.textContent}"`, 'success');
+            log('domLog', `Clar elem text: "${clarElem.textContent}"`, 'success');
+            log('domLog', `Flu elem text: "${fluElem.textContent}"`, 'success');
+            log('domLog', `Total elem text: "${totalElem.textContent}"`, 'success');
+        }
+
+        async function updateLiveScores() {
+            try {
+                pollCount++;
+                log('pollingLog', `Poll #${pollCount}: Fetching...`, 'info');
+                
+                const response = await fetch('http://localhost:5000/get_feedback');
+                const data = await response.json();
+                
+                if (data.analysis && data.analysis !== null) {
+                    const conf = data.analysis.confidence || 0;
+                    const clar = data.analysis.clarity || 0;
+                    const flu = data.analysis.fluency || 0;
+                    const total = data.analysis.score || 0;
+
+                    document.getElementById('liveConfidence').textContent = `${conf.toFixed(1)}/30`;
+                    document.getElementById('liveClarity').textContent = `${clar.toFixed(1)}/30`;
+                    document.getElementById('liveFluency').textContent = `${flu.toFixed(1)}/20`;
+                    document.getElementById('liveTotal').textContent = `${total.toFixed(1)}/80`;
+
+                    log('pollingLog', `✓ Updated: Conf=${conf}, Clar=${clar}, Flu=${flu}, Total=${total}`, 'success');
+                    
+                    if (data.text && data.text.trim() !== '') {
+                        log('pollingLog', `Text: "${data.text}"`, 'info');
+                    }
+                } else {
+                    log('pollingLog', `No data yet (status: ${data.status})`, 'info');
+                }
+            } catch (error) {
+                log('pollingLog', `ERROR: ${error.message}`, 'error');
+            }
+        }
+
+        function startPolling() {
+            if (pollingInterval) {
+                log('pollingLog', 'Already polling!', 'info');
+                return;
+            }
+            pollCount = 0;
+            log('pollingLog', 'Starting continuous polling (1 per second)...', 'success');
+            pollingInterval = setInterval(updateLiveScores, 1000);
+        }
+
+        function stopPolling() {
+            if (pollingInterval) {
+                clearInterval(pollingInterval);
+                pollingInterval = null;
+                log('pollingLog', `Stopped polling after ${pollCount} requests`, 'info');
+            }
+        }
+    </script>
+</body>
+</html>

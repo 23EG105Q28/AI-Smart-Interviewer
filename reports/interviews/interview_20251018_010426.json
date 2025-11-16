@@ -1,0 +1,168 @@
+{
+  "timestamp": "20251018_010426",
+  "duration": 217.99725651741028,
+  "questions": [
+    "Thank you for joining today. Let's start - can you walk me through your professional background?",
+    "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+    "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+    "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+    "Walk me through your most successful project from start to finish. What made it successful?",
+    "What motivates you in your professional life, and how do you handle setbacks?"
+  ],
+  "responses": [
+    {
+      "question": "Thank you for joining today. Let's start - can you walk me through your professional background?",
+      "question_number": 1,
+      "answer": "yes this is the fresher jobs I have no experience working for a company",
+      "timestamp": 1760729479.2589645
+    },
+    {
+      "question": "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+      "question_number": 2,
+      "answer": "pause a song a very difficult TSA problem in",
+      "timestamp": 1760729535.4360492
+    },
+    {
+      "question": "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+      "question_number": 3,
+      "answer": "no I actually started",
+      "timestamp": 1760729559.670839
+    },
+    {
+      "question": "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+      "question_number": 4,
+      "answer": "I just confronted him direct",
+      "timestamp": 1760729584.194644
+    },
+    {
+      "question": "Walk me through your most successful project from start to finish. What made it successful?",
+      "question_number": 5,
+      "answer": "it was successful because I am married",
+      "timestamp": 1760729638.107661
+    },
+    {
+      "question": "What motivates you in your professional life, and how do you handle setbacks?",
+      "question_number": 6,
+      "answer": "I ensure",
+      "timestamp": 1760729660.5300055
+    }
+  ],
+  "messages": [
+    {
+      "type": "ai",
+      "content": "Hello and welcome! I've reviewed your resume and prepared some questions for you. Let's begin!",
+      "timestamp": 1760729448.175727
+    },
+    {
+      "type": "ai",
+      "content": "Thank you for joining today. Let's start - can you walk me through your professional background?",
+      "timestamp": 1760729459.4855192
+    },
+    {
+      "type": "user",
+      "content": "yes this is the fresher jobs I have no experience working for a company",
+      "timestamp": 1760729479.2589645
+    },
+    {
+      "type": "ai",
+      "content": "Excellent response. Let's continue to the next question.",
+      "timestamp": 1760729480.2599523
+    },
+    {
+      "type": "ai",
+      "content": "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+      "timestamp": 1760729488.7404892
+    },
+    {
+      "type": "ai",
+      "content": "I'm sorry, I didn't quite catch that. Could you please repeat your answer?",
+      "timestamp": 1760729508.2277899
+    },
+    {
+      "type": "ai",
+      "content": "I see you have programming experience. Can you describe a challenging technical problem you solved and your approach?",
+      "timestamp": 1760729517.7355745
+    },
+    {
+      "type": "user",
+      "content": "pause a song a very difficult TSA problem in",
+      "timestamp": 1760729535.4360492
+    },
+    {
+      "type": "ai",
+      "content": "Excellent response. Let's continue to the next question.",
+      "timestamp": 1760729536.4368863
+    },
+    {
+      "type": "ai",
+      "content": "You've worked with AI and machine learning. Can you tell me about a specific ML project and the impact it had?",
+      "timestamp": 1760729544.8650448
+    },
+    {
+      "type": "user",
+      "content": "no I actually started",
+      "timestamp": 1760729559.670839
+    },
+    {
+      "type": "ai",
+      "content": "Thank you for sharing that. Let's continue to the next question.",
+      "timestamp": 1760729560.671317
+    },
+    {
+      "type": "ai",
+      "content": "Tell me about a time when you had to work with a difficult team member. How did you handle it?",
+      "timestamp": 1760729569.3020625
+    },
+    {
+      "type": "user",
+      "content": "I just confronted him direct",
+      "timestamp": 1760729584.194644
+    },
+    {
+      "type": "ai",
+      "content": "Thank you for sharing that. Let's continue to the next question.",
+      "timestamp": 1760729585.1962223
+    },
+    {
+      "type": "ai",
+      "content": "Walk me through your most successful project from start to finish. What made it successful?",
+      "timestamp": 1760729593.8310888
+    },
+    {
+      "type": "ai",
+      "content": "I'm sorry, I didn't quite catch that. Could you please repeat your answer?",
+      "timestamp": 1760729613.0276115
+    },
+    {
+      "type": "ai",
+      "content": "Walk me through your most successful project from start to finish. What made it successful?",
+      "timestamp": 1760729622.4914663
+    },
+    {
+      "type": "user",
+      "content": "it was successful because I am married",
+      "timestamp": 1760729638.107661
+    },
+    {
+      "type": "ai",
+      "content": "I appreciate that insight. Let's continue to the next question.",
+      "timestamp": 1760729639.1085749
+    },
+    {
+      "type": "ai",
+      "content": "What motivates you in your professional life, and how do you handle setbacks?",
+      "timestamp": 1760729647.9384336
+    },
+    {
+      "type": "user",
+      "content": "I ensure",
+      "timestamp": 1760729660.5300055
+    },
+    {
+      "type": "ai",
+      "content": "Thank you so much for your time! You've provided some great answers. Let me prepare your personalized improvement report now.",
+      "timestamp": 1760729661.5304077
+    }
+  ],
+  "resume_filename": "Manish_Mathe_resume_Google24-08.pdf"
+}
