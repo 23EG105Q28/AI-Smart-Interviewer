@@ -7,4 +7,5 @@ numpy<2
 SpeechRecognition==3.10.0
 textblob==0.18.0
 PyAudio==0.2.14
-Werkzeug==3.0.1
+
+
